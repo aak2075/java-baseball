@@ -37,6 +37,9 @@ public class OutputView {
 
     public static void correct() {
         System.out.println(CORRECT_MESSAGE);
+    }
+
+    public static void inputReplay() {
         System.out.println(INPUT_REPLAY_MESSAGE);
     }
 }
