@@ -21,7 +21,7 @@ public class Baseball {
 
     public int countStrike(GameNumber input) {
         int count = 0;
-        for (int digit = DIGIT_MIN; digit < DIGIT_MAX; digit++) {
+        for (int digit = DIGIT_MIN; digit <= DIGIT_MAX; digit++) {
             if (answer.equals(input, digit)) {
                 count = count + 1;
             }
