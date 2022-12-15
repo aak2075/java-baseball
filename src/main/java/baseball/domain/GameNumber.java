@@ -10,11 +10,11 @@ public class GameNumber {
     }
 
     public boolean equals(GameNumber input, int digit) {
-        return number.get(digit).equals(input.number.get(digit));
+        return number.get(digit-1).equals(input.number.get(digit-1));
     }
 
     public boolean contains(GameNumber input, int digit) {
-        return number.contains(input.number.get(digit));
+        return number.contains(input.number.get(digit-1));
     }
 
     public boolean containsOnly(GameNumber input, int digit) {
