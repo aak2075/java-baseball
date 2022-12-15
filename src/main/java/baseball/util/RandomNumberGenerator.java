@@ -5,7 +5,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RandomNumberGenerator implements NumberGenerator{
+public class RandomNumberGenerator implements NumberGenerator {
     private static final int NUMBER_SIZE = 3;
     private static final int RANGE_MIN = 1;
     private static final int RANGE_MAX = 9;

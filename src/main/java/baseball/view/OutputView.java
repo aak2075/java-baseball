@@ -10,7 +10,7 @@ public class OutputView {
     private static final String INPUT_REPLAY_MESSAGE = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
 
     public static void start() {
-       System.out.println(GAME_START_MESSAGE);
+        System.out.println(GAME_START_MESSAGE);
     }
 
     public static void inputNumber() {
@@ -30,7 +30,7 @@ public class OutputView {
         if (strike > 0) {
             sb.append(strike + STRIKE_MESSAGE + " ");
         }
-        sb.deleteCharAt(sb.length()-1);
+        sb.deleteCharAt(sb.length() - 1);
 
         System.out.println(sb);
     }
