@@ -12,7 +12,7 @@ public class Baseball {
     public int countBall(GameNumber input) {
         int count = 0;
         for (int digit = DIGIT_MIN; digit <= DIGIT_MAX; digit++) {
-            if (answer.checkBall(input, digit)) {
+            if (answer.containsOnly(input, digit)) {
                 count = count + 1;
             }
         }
@@ -22,7 +22,7 @@ public class Baseball {
     public int countStrike(GameNumber input) {
         int count = 0;
         for (int digit = DIGIT_MIN; digit < DIGIT_MAX; digit++) {
-            if (answer.checkStrike(input, digit)) {
+            if (answer.equals(input, digit)) {
                 count = count + 1;
             }
         }
@@ -32,6 +32,5 @@ public class Baseball {
     public boolean isNothing(GameNumber input) {
         return countBall(input) + countStrike(input) == 0;
     }
-
 
 }

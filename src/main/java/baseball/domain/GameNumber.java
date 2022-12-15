@@ -9,14 +9,18 @@ public class GameNumber {
         this.number = number;
     }
 
-    public boolean checkStrike(GameNumber input, int digit) {
+    public boolean equals(GameNumber input, int digit) {
         return number.get(digit).equals(input.number.get(digit));
     }
 
-    public boolean checkBall(GameNumber input, int digit) {
-        if (checkStrike(input, digit)) {
+    public boolean contains(GameNumber input, int digit) {
+        return number.contains(input.number.get(digit));
+    }
+
+    public boolean containsOnly(GameNumber input, int digit) {
+        if (equals(input, digit)) {
             return false;
         }
-        return number.contains(input.number.get(digit));
+        return contains(input, digit);
     }
 }
