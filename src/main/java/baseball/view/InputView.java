@@ -12,9 +12,14 @@ public class InputView {
     public static List<Integer> readNumbers() {
         String input = Console.readLine();
         String[] arr = input.split("");
-        return Arrays.stream(arr)
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());
+        try {
+            return Arrays.stream(arr)
+                    .map(Integer::parseInt)
+                    .collect(Collectors.toList());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("ERROR 숫자가 아닙니다.");
+        }
+
     }
 
     public static GameCommand readReplay() {
